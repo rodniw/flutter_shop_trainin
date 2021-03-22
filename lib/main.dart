@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop_trainin/shopping.dart';
+import 'package:flutter_shop_trainin/page/shopping.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {

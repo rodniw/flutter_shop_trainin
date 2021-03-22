@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop_trainin/appbar_widget.dart';
-import 'package:flutter_shop_trainin/data.dart';
-import 'package:flutter_shop_trainin/filters_list_widget.dart';
-import 'package:flutter_shop_trainin/items_list_widget.dart';
-import 'package:flutter_shop_trainin/scroll_title_widget.dart';
+import 'package:flutter_shop_trainin/widget/appbar_widget.dart';
+import 'package:flutter_shop_trainin/data/data_source.dart';
+import 'package:flutter_shop_trainin/data/filters_list_widget.dart';
+import 'package:flutter_shop_trainin/data/items_list_widget.dart';
+import 'package:flutter_shop_trainin/data/scroll_title_widget.dart';
 
 class Shopping extends StatefulWidget {
   @override

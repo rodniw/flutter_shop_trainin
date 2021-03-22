@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_shop_trainin/constants.dart';
-import 'package:flutter_shop_trainin/data.dart';
+import 'package:flutter_shop_trainin/utils/constants.dart';
+import 'package:flutter_shop_trainin/data/data_source.dart';
 
 class ListViewWidget extends StatefulWidget {
   @override
