@@ -48,7 +48,74 @@ class _StateListView extends State<ListViewWidget> {
           child: Stack(
             children: <Widget>[
 
+              GestureDetector(
+                onTap: () {
+                  setState(() {
+                    perfume.favorite = !perfume.favorite;
+                  });
+                },
+                child: Align(
+                  alignment: Alignment.topRight,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(15),
+                      ),
+                    ),
+                    width: 60,
+                    height: 60,
+                    child: Center(
+                      child: Icon(
+                        perfume.favorite ? Icons.favorite : Icons.favorite_border,
+                        size: 32,
+                        color: Colors.black,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+
+              Padding(
+                padding: EdgeInsets.symmetric(vertical: 32, horizontal: 16,),
+                child: Center(
+                  child: Hero(
+                    tag: perfume.name,
+                    child: Image.asset(
+                      perfume.images[0],
+                      fit: BoxFit.fitHeight,
+                      height: 160,
+                    ),
+                  ),
+                ),
+              ),
+
             ]
+          ),
+        ),
+
+        SizedBox(
+          height: 16,
+        ),
+
+        Text(
+          perfume.name,
+          style: TextStyle(
+            fontSize: 16,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+
+        SizedBox(
+          height: 8,
+        ),
+
+        Text (
+          "\$ " + perfume.price.toStringAsFixed(2),
+          style: TextStyle(
+            fontSize: 16,
+            color: kGreen,
+            fontWeight: FontWeight.bold,
           ),
         )
 

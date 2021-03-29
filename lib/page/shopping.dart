@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_shop_trainin/data/best_deals_list_widget.dart';
+import 'package:flutter_shop_trainin/data/title_with_all_button_widget.dart';
 import 'package:flutter_shop_trainin/widget/appbar_widget.dart';
 import 'package:flutter_shop_trainin/data/data_source.dart';
 import 'package:flutter_shop_trainin/data/filters_list_widget.dart';
@@ -36,6 +38,14 @@ class _ShoppingState extends State<Shopping> {
                 ),
 
                 ListViewWidget(),
+
+                TitleWithAllButtonWidget(),
+
+                SizedBox(
+                  height: 32,
+                ),
+
+                BestDealsListWidget(),
 
               ]
           ),
