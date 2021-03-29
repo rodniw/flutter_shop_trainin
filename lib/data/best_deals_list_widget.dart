@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_shop_trainin/data/data_source.dart';
+import 'package:flutter_shop_trainin/utils/constants.dart';
 
 class BestDealsListWidget extends StatefulWidget {
   @override
@@ -72,7 +73,72 @@ class _StateBestDealsListWidget extends State<BestDealsListWidget> {
             ),
           ),
 
-          
+          Padding(
+            padding: EdgeInsets.all(10),
+            child: Row(
+              children: <Widget>[
+
+                Container(
+                  width: 110,
+                  decoration: BoxDecoration(
+                    gradient: kGradient,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(25),
+                    ),
+                  ),
+                  child: Center(
+                    child: Image.asset(
+                      perfume.images[0],
+                      fit: BoxFit.fitHeight,
+                      height: 90,
+                    ),
+                  ),
+                ),
+
+                SizedBox(
+                  width: 16,
+                ),
+
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+
+                    Text(
+                      perfume.name,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+
+                    Text(
+                      perfume.description,
+                      style: TextStyle(
+                        fontSize: 14,
+                        color: Colors.grey[400],
+                      ),
+                    ),
+
+                    SizedBox(
+                      height: 8,
+                    ),
+
+                    Text(
+                      "\$ " + perfume.price.toStringAsFixed(2),
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: kGreen,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+
+                  ],
+                )
+
+              ],
+            ),
+          )
 
         ],
       ),
